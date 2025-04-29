@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'VishwasMaven'  // 
+        maven 'VishwasMaven'  // Make sure this matches your Jenkins Maven tool
     }
 
     stages {
@@ -26,8 +26,8 @@ pipeline {
 
         stage('Run Application') {
             steps {
-                // Adjust the JAR name to match your project’s output
-                sh 'java -jar target/Migration-1.0-SNAPSHOT.jar'
+                // ✅ Corrected jar name
+                sh 'java -jar target/MyMavenApp2-1.0-SNAPSHOT.jar'
             }
         }
     }
